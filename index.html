@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: #CCC;
+    }
+
+    .tab-panel {
+      width: 100%;
+      margin: 100px auto;
+    }
+
+    .tab-panel .tabs {
+      float: left;
+      line-height: 3em;
+      color: #666;
+      text-decoration: none;
+      background-color: #ddd;
+      padding: 0 20px;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      position: relative;
+      margin: 0 5px;
+      z-index: 0;
+      font-size: 18px;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .tab-contents-group {
+      clear: both;
+      position: relative;
+      top: -1px;
+      border-top: 1px solid #ccc;
+    }
+
+    .tab-contents-group .tab-contnet {
+      position: absolute;
+      padding: 30px;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .c2,
+    .c3,
+    .c4,
+    .c5 {
+      display: none;
+    }
+
+    .tab-panel .tabs:focus {
+      z-index: 2;
+      background-color: #fff;
+    }
+
+    .tabs2:focus~.tab-contents-group .c1,
+    .tabs3:focus~.tab-contents-group .c1,
+    .tabs4:focus~.tab-contents-group .c1,
+    .tabs5:focus~.tab-contents-group .c1 {
+      display: none;
+    }
+
+    .tabs1:focus~.tab-contents-group .c1,
+    .tabs2:focus~.tab-contents-group .c2,
+    .tabs3:focus~.tab-contents-group .c3,
+    .tabs4:focus~.tab-contents-group .c4,
+    .tabs5:focus~.tab-contents-group .c5 {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tab-panel">
+    <a href="#" class="tabs tabs1">教學</a>
+    <a href="#" class="tabs tabs2">原創</a>
+    <a href="#" class="tabs tabs3">範例</a>
+    <a href="#" class="tabs tabs4">網站</a>
+    <a href="#" class="tabs tabs5">網站2</a>
+    <div class="tab-contents-group">
+      <div class="tab-contnet c1">教學內容Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo alias, sapiente quam
+        doloribus ipsum in explicabo? Ex magnam aut eum, eveniet error possimus molestias porro, voluptates modi, a
+        reprehenderit vitae.</div>
+      <div class="tab-contnet c2">原創內容</div>
+      <div class="tab-contnet c3">範例內容</div>
+      <div class="tab-contnet c4">網站內容</div>
+      <div class="tab-contnet c5">
+        <h2>移動我說可。</h2> <img src='https://picsum.photos/600/300?random=1'>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
